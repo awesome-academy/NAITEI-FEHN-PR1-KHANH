@@ -1,7 +1,16 @@
 import './App.css'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Header from './layouts/Header/Header'
 
 function App() {
-  return <h1 className='text-3xl font-bold text-red-500 underline'>Hello world!</h1>
+  return (
+    <Router>
+      <div className='app'>
+        <Header />
+        <main className='content'></main>
+      </div>
+    </Router>
+  )
 }
 
 export default App
