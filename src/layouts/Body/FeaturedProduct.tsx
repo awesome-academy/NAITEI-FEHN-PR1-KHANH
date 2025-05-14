@@ -1,7 +1,7 @@
 import { FaShoppingCart } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
-import { type FeaturedProductType } from '../interfaces/Product'
-import { api } from '../services/api'
+import { type FeaturedProductType } from '../../interfaces/Product'
+import { api } from '../../services/api'
 const FeaturedProduct = () => {
   const [product, setProduct] = useState<FeaturedProductType | null>(null)
   const [loading, setLoading] = useState(true)
@@ -99,20 +99,20 @@ const FeaturedProduct = () => {
 
               <div className='grid grid-cols-4 gap-2 mt-8'>
                 <div className='border border-gray-200 p-2 text-center'>
-                  <div className='text-xl font-bold text-yellow-600'>{222}</div>
+                  <div className='text-xl font-bold text-yellow-600'>{product?.countdown.days}</div>
                   <div className='text-xs text-gray-500'>NGÀY</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{23}</div>
-                  <div className='text-xs text-gray-500'>GIỜ</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown.hours}</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{55}</div>
-                  <div className='text-xs text-gray-500'>PHÚT</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown.minutes}</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{55}</div>
-                  <div className='text-xs text-gray-500'>GIÂY</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown.seconds}</div>
                 </div>
               </div>
             </div>
