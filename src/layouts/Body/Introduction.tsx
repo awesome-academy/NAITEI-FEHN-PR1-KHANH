@@ -1,8 +1,8 @@
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { type IntroductionType } from '../interfaces/Product'
-import { api } from '../services/api'
+import { type IntroductionType } from '../../interfaces/Product'
+import { api } from '../../services/api'
 
 const Introduction = () => {
   const [introduction, setIntroduction] = useState<IntroductionType | null>(null)

@@ -2,9 +2,9 @@
   "products": [
     {
       "id": 1,
-      "name": "RƯỢU VANG ĐỎ LẠT",
+      "name": "RƯỢU VANG ĐỎ",
       "price": 320000,
-      "image": "/src/assets/wine-white.jpg",
+      "image": "/src/assets/products/1.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
       "badge": {
@@ -14,10 +14,10 @@
     },
     {
       "id": 2,
-      "name": "RƯỢU VANG ĐỎ LẠT",
+      "name": "RƯỢU VANG XANH",
       "price": 320000,
       "oldPrice": 370000,
-      "image": "/src/assets/wine-white.jpg",
+      "image": "/src/assets/products/2.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
       "badge": {
@@ -27,9 +27,9 @@
     },
     {
       "id": 3,
-      "name": "RƯỢU VANG ĐỎ LẠT",
+      "name": "RƯỢU VANG VÀNG",
       "price": 320000,
-      "image": "/src/assets/wine-white.jpg",
+      "image": "/src/assets/products/3.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
       "badge": {
@@ -39,9 +39,9 @@
     },
     {
       "id": 4,
-      "name": "RƯỢU VANG ĐỎ LẠT",
+      "name": "RƯỢU VANG TRẮNG",
       "price": 320000,
-      "image": "/src/assets/wine-white.jpg",
+      "image": "/src/assets/products/4.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
     }
@@ -50,7 +50,7 @@
     "id": 5,
     "name": "RƯỢU NHỎ NĂM 1987",
     "price": 330000,
-    "image": "/src/assets/wine-white.jpg",
+    "image": "/src/assets/products/5.jpg",
     "category": "RƯỢU TRẮNG",
     "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
     "countdown": {
@@ -60,8 +60,139 @@
       "seconds": 15
     }
   },
+  "bestSellingProducts": [
+    {
+      "id": 1,
+      "name": "RƯỢU VANG ITALIA",
+      "price": 320000,
+      "image": "/src/assets/products/5.jpg",
+      "category": "RƯỢU VANG ĐỎ LẠT",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+    },
+    {
+      "id": 2,
+      "name": "RƯỢU VANG LẠT",
+      "price": 320000,
+      "oldPrice": 370000,
+      "image": "/src/assets/products/6.jpg",
+      "category": "RƯỢU VANG ĐỎ LẠT",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+    },
+    {
+      "id": 3,
+      "name": "RƯỢU VANG RAU",
+      "price": 320000,
+      "image": "/src/assets/products/5.jpg",
+      "category": "RƯỢU VANG ĐỎ LẠT",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+    },
+    {
+      "id": 4,
+      "name": "RƯỢU VANG TRẮNG XANH",
+      "price": 320000,
+      "oldPrice": 370000,
+      "image": "/src/assets/products/6.jpg",
+      "category": "RƯỢU VANG ĐỎ LẠT",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+    }
+  ],
   "introduction": {
     "title": "GIỚI THIỆU",
     "content": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius."
-  }
+  },
+  "galleryImages": [
+    {
+      "id": 1,
+      "src": "https://cdn.pixabay.com/photo/2016/10/22/20/34/wines-1761613_1280.jpg",
+      "alt": "Wine barrels in cellar",
+      "link": "/category/barrels"
+    },
+    {
+      "id": 2,
+      "src": "https://cdn.pixabay.com/photo/2022/04/26/09/38/grapes-7157943_960_720.jpg",
+      "alt": "Dark grapes on wooden surface",
+      "link": "/category/grapes",
+      "overlay": {
+        "year": "1987",
+        "title": "RƯỢU"
+      }
+    },
+    {
+      "id": 3,
+      "src": "/src/assets/gallery/wine-tools.jpg",
+      "alt": "Wine tools and grapes",
+      "link": "/category/tools"
+    },
+    {
+      "id": 4,
+      "src": "/src/assets/gallery/white-wine.jpg",
+      "alt": "White wine glass with grapes",
+      "link": "/category/white-wine"
+    },
+    {
+      "id": 5,
+      "src": "/src/assets/gallery/wine-barrel.jpg",
+      "alt": "Wine barrels in cellar",
+      "link": "/category/barrels"
+    },
+    {
+      "id": 6,
+      "src": "https://cdn.pixabay.com/photo/2023/08/06/12/54/ai-generated-8172888_1280.jpg",
+      "alt": "Dark grapes on wooden surface",
+      "link": "/category/grapes"
+    },
+    {
+      "id": 7,
+      "src": "https://cdn.pixabay.com/photo/2017/01/04/13/55/grapes-1952035_1280.jpg",
+      "alt": "Wine tools and grapes",
+      "link": "/category/tools"
+    },
+    {
+      "id": 8,
+      "src": "https://cdn.pixabay.com/photo/2017/01/04/14/03/grapes-1952073_1280.jpg",
+      "alt": "White wine glass with grapes",
+      "link": "/category/white-wine"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "VANG THĂNG LONG CLASSIC",
+      "date": "Đăng bởi Grapple | 30/06/2015 | 60 lượt đọc",
+      "image": "https://cdn.pixabay.com/photo/2020/02/02/15/07/wine-4813260_640.jpg",
+      "excerpt": "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy tràn mịn.",
+      "content": "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy tràn mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml."
+    },
+    {
+      "id": 2,
+      "title": "VANG THĂNG LONG CLASSIC",
+      "date": "Đăng bởi Grapple | 30/06/2015 | 60 lượt đọc",
+      "image": "https://cdn.pixabay.com/photo/2018/12/28/01/34/rum-3898745_640.jpg",
+      "excerpt": "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy tràn mịn.",
+      "content": "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy tràn mịn. Vang Nổ thăng long..."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "GIANG LT",
+      "position": "Graphic design",
+      "image": "/src/assets/designer.jpg",
+      "content": "Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy tràn mịn. Vang Nổ thăng long"
+    },
+    {
+      "id": 2,
+      "name": "MINH TRANG",
+      "position": "Marketing Manager",
+      "image": "/src/assets/designer.jpg",
+      "content": "Sản phẩm rượu vang đỏ này có hương vị đậm đà, thơm ngon với hậu vị kéo dài. Tôi rất hài lòng khi thưởng thức cùng bạn bè trong các buổi tiệc."
+    },
+    {
+      "id": 3,
+      "name": "HOÀNG NAM",
+      "position": "Wine Enthusiast",
+      "image": "/src/assets/designer.jpg",
+      "content": "Chất lượng rượu vang tuyệt vời với giá cả phải chăng. Đóng gói cẩn thận và giao hàng nhanh chóng. Tôi sẽ tiếp tục ủng hộ Wine House."
+    }
+  ]
 }
