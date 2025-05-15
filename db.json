@@ -7,10 +7,21 @@
       "image": "/src/assets/products/1.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
-      "badge": {
-        "type": "sale",
-        "color": "bg-yellow-500"
-      }
+      "featured": false,
+      "bestSelling": true,
+      "new": false,
+      "sale": true,
+      "features": "Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được những đôi cao gót đẹp. Sau đây là những mẹo giúp bạn có thể tự tin đi giày cao gót.\n\nTrong những ngày hè, các chị em thường có xu hướng chọn cho mình những đôi giày cao gót có quai mảnh, nhưng điều này lại càng làm lộ đôi chân to của bạn. Thay vào đó, hãy chọn những đôi giày có quai to bản hoặc bít mũi, điều này sẽ giúp đôi chân bạn trông thon gọn hơn.",
+      "information": "Rượu vang đỏ có nhiều loại, mỗi loại mang hương vị và đặc trưng riêng. Rượu vang đỏ được làm từ nho đỏ, được ủ và lên men theo quy trình nghiêm ngặt.\n\nSản phẩm này có nồng độ cồn vừa phải, hương vị đậm đà với notes của quả mọng đỏ, vani và chút hương gỗ sồi. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai hoặc đơn giản là nhâm nhi trong những buổi tối thư giãn.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Nguyễn Văn A",
+          "rating": 4,
+          "date": "15/05/2023",
+          "content": "Sản phẩm rất tuyệt vời, hương vị đậm đà và thơm ngon. Tôi rất hài lòng với sản phẩm này và sẽ tiếp tục mua trong tương lai."
+        }
+      ]
     },
     {
       "id": 2,
@@ -20,10 +31,28 @@
       "image": "/src/assets/products/2.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
-      "badge": {
-        "type": "new",
-        "color": "bg-green-500"
-      }
+      "featured": false,
+      "bestSelling": false,
+      "new": true,
+      "sale": true,
+      "features": "Rượu vang xanh là một loại rượu vang trắng đặc biệt với màu sắc hơi xanh lục nhẹ. Đây là loại rượu được sản xuất từ nho trắng với kỹ thuật đặc biệt giúp giữ lại một phần màu sắc tự nhiên từ vỏ nho.\n\nHương vị của rượu vang xanh thường tươi mát với notes của táo xanh, chanh và các loại trái cây nhiệt đới. Đây là loại rượu lý tưởng để thưởng thức trong những ngày hè nóng bức.",
+      "information": "Rượu vang xanh được sản xuất chủ yếu ở các vùng ôn đới với khí hậu mát mẻ. Quy trình sản xuất đặc biệt giúp giữ lại hương vị tươi mát và màu sắc đặc trưng.\n\nSản phẩm này có nồng độ cồn trung bình, vị chua nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Trần Thị B",
+          "rating": 5,
+          "date": "20/04/2023",
+          "content": "Rượu vang xanh này có hương vị tuyệt vời, rất phù hợp với các món hải sản. Tôi đặc biệt thích vị chua nhẹ và hương thơm của nó."
+        },
+        {
+          "id": 2,
+          "name": "Lê Văn C",
+          "rating": 4,
+          "date": "05/05/2023",
+          "content": "Sản phẩm chất lượng, đóng gói cẩn thận. Hương vị đúng như mô tả, rất tươi mát và dễ uống."
+        }
+      ]
     },
     {
       "id": 3,
@@ -32,68 +61,279 @@
       "image": "/src/assets/products/3.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
       "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
-      "badge": {
-        "type": "hot",
-        "color": "bg-red-500"
-      }
+      "featured": false,
+      "bestSelling": false,
+      "new": false,
+      "sale": true,
+      "features": "Rượu vang vàng là loại rượu vang được làm từ nho trắng với quá trình lên men đặc biệt tạo ra màu vàng đặc trưng. Loại rượu này thường có hương vị phong phú và đậm đà hơn so với rượu vang trắng thông thường.\n\nĐặc điểm nổi bật của rượu vang vàng là hương thơm của mật ong, hoa cỏ và trái cây chín. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn có vị đậm đà.",
+      "information": "Rượu vang vàng được sản xuất bằng cách để vỏ nho tiếp xúc với nước nho trong thời gian ngắn, tạo ra màu vàng đặc trưng. Quá trình lên men thường diễn ra trong thùng gỗ sồi để tạo thêm hương vị.\n\nSản phẩm này có nồng độ cồn trung bình đến cao, vị ngọt nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt trắng, hải sản hoặc các món ăn có nước sốt kem.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Phạm Thị D",
+          "rating": 5,
+          "date": "10/03/2023",
+          "content": "Rượu vang vàng này có hương vị tuyệt vời, rất phù hợp với các món thịt trắng. Tôi đặc biệt thích hương thơm của mật ong và hoa cỏ."
+        }
+      ]
     },
     {
       "id": 4,
       "name": "RƯỢU VANG TRẮNG",
       "price": 320000,
       "image": "/src/assets/products/4.jpg",
-      "category": "RƯỢU VANG ĐỎ LẠT",
-      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
-    }
-  ],
-  "featuredProduct": {
-    "id": 5,
-    "name": "RƯỢU NHỎ NĂM 1987",
-    "price": 330000,
-    "image": "/src/assets/products/5.jpg",
-    "category": "RƯỢU TRẮNG",
-    "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
-    "countdown": {
-      "days": 334,
-      "hours": 26,
-      "minutes": 60,
-      "seconds": 15
-    }
-  },
-  "bestSellingProducts": [
-    {
-      "id": 1,
-      "name": "RƯỢU VANG ITALIA",
-      "price": 320000,
-      "image": "/src/assets/products/5.jpg",
-      "category": "RƯỢU VANG ĐỎ LẠT",
-      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+      "category": "RƯỢU TRẮNG",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "featured": false,
+      "bestSelling": false,
+      "new": true,
+      "sale": true,
+      "features": "Rượu vang trắng là loại rượu vang được làm từ nho trắng hoặc nho đỏ nhưng không để vỏ nho tiếp xúc với nước nho trong quá trình lên men. Đây là loại rượu có màu sắc từ trong suốt đến vàng nhạt.\n\nĐặc điểm nổi bật của rượu vang trắng là hương thơm của trái cây như táo, lê, đào và các loại hoa. Đây là loại rượu thích hợp để thưởng thức trong những ngày nóng hoặc khi ăn các món nhẹ.",
+      "information": "Rượu vang trắng được sản xuất bằng cách ép nho và lên men nước nho mà không có vỏ. Quá trình lên men thường diễn ra ở nhiệt độ thấp để giữ hương vị tươi mát.\n\nSản phẩm này có nồng độ cồn thấp đến trung bình, vị chua nhẹ và hậu vị tươi mát. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Hoàng Văn E",
+          "rating": 4,
+          "date": "25/02/2023",
+          "content": "Rượu vang trắng này có hương vị tươi mát, rất phù hợp với các món hải sản. Tôi đặc biệt thích vị chua nhẹ và hương thơm của trái cây."
+        },
+        {
+          "id": 2,
+          "name": "Nguyễn Thị F",
+          "rating": 3,
+          "date": "15/03/2023",
+          "content": "Sản phẩm chất lượng khá tốt, hương vị tươi mát nhưng hơi nhạt so với mong đợi. Đóng gói cẩn thận và giao hàng nhanh chóng."
+        }
+      ]
     },
     {
-      "id": 2,
+      "id": 5,
+      "name": "RƯỢU NHO NĂM 1987",
+      "price": 330000,
+      "image": "/src/assets/products/5.jpg",
+      "category": "RƯỢU TRẮNG",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "countdown": {
+        "days": 334,
+        "hours": 26,
+        "minutes": 60,
+        "seconds": 15
+      },
+      "featured": true,
+      "bestSelling": false,
+      "new": false,
+      "sale": false,
+      "features": "Rượu nho năm 1987 là một loại rượu vang vintage đặc biệt, được sản xuất từ nho thu hoạch trong năm 1987 - một năm được đánh giá là có điều kiện thời tiết lý tưởng cho việc trồng nho.\n\nĐặc điểm nổi bật của rượu vang vintage này là hương vị phức tạp đã phát triển qua thời gian, với notes của trái cây khô, da thuộc, và các loại gia vị. Đây là loại rượu thích hợp để thưởng thức trong các dịp đặc biệt.",
+      "information": "Rượu nho năm 1987 được sản xuất theo phương pháp truyền thống và được ủ trong thùng gỗ sồi trong nhiều năm trước khi đóng chai. Sau đó, rượu tiếp tục được lưu trữ trong điều kiện lý tưởng để phát triển hương vị.\n\nSản phẩm này có nồng độ cồn cao, vị đậm đà và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai lâu năm hoặc đơn giản là thưởng thức một mình để cảm nhận đầy đủ hương vị.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Trần Văn G",
+          "rating": 5,
+          "date": "05/01/2023",
+          "content": "Rượu nho năm 1987 này là một trong những loại rượu vang ngon nhất mà tôi từng thưởng thức. Hương vị phức tạp và đậm đà, thực sự xứng đáng với giá tiền."
+        },
+        {
+          "id": 2,
+          "name": "Lê Thị H",
+          "rating": 5,
+          "date": "20/01/2023",
+          "content": "Tôi mua chai rượu này để tặng cho bố tôi nhân dịp sinh nhật và ông rất thích. Hương vị đặc biệt và đóng gói rất sang trọng."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "RƯỢU VANG ITALIA",
+      "price": 320000,
+      "image": "/src/assets/products/6.jpg",
+      "category": "RƯỢU VANG ĐỎ LẠT",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "featured": false,
+      "bestSelling": true,
+      "new": true,
+      "sale": false,
+      "features": "Rượu vang Italia là loại rượu vang được sản xuất tại Italia - một trong những quốc gia có truyền thống lâu đời về sản xuất rượu vang. Đây là loại rượu có hương vị đặc trưng của vùng đất Italia.\n\nĐặc điểm nổi bật của rượu vang Italia là hương thơm của các loại trái cây như cherry, mận, và các loại gia vị. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn Italia truyền thống.",
+      "information": "Rượu vang Italia được sản xuất từ các giống nho đặc trưng của Italia như Sangiovese, Nebbiolo, và Barbera. Quá trình sản xuất tuân theo các quy định nghiêm ngặt của Italia về rượu vang.\n\nSản phẩm này có nồng độ cồn trung bình, vị cân bằng giữa chua và chát, với hậu vị kéo dài. Phù hợp để thưởng thức cùng các món pasta, pizza, hoặc các món thịt đỏ.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Phạm Văn I",
+          "rating": 4,
+          "date": "15/12/2022",
+          "content": "Rượu vang Italia này có hương vị đặc trưng của vùng đất Italia, rất phù hợp với các món ăn Italia. Tôi đặc biệt thích hương thơm của cherry và mận."
+        }
+      ]
+    },
+    {
+      "id": 7,
       "name": "RƯỢU VANG LẠT",
       "price": 320000,
       "oldPrice": 370000,
-      "image": "/src/assets/products/6.jpg",
+      "image": "/src/assets/products/7.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
-      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "featured": false,
+      "bestSelling": true,
+      "new": false,
+      "sale": false,
+      "features": "Rượu vang Lạt là loại rượu vang được sản xuất tại Đà Lạt, Việt Nam - một vùng đất có khí hậu ôn đới thích hợp cho việc trồng nho. Đây là loại rượu có hương vị đặc trưng của vùng đất Đà Lạt.\n\nĐặc điểm nổi bật của rượu vang Lạt là hương thơm của các loại trái cây như dâu tây, việt quất, và các loại hoa. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn Việt Nam.",
+      "information": "Rượu vang Lạt được sản xuất từ các giống nho được trồng tại Đà Lạt, Việt Nam. Quá trình sản xuất kết hợp giữa kỹ thuật truyền thống và công nghệ hiện đại.\n\nSản phẩm này có nồng độ cồn thấp đến trung bình, vị ngọt nhẹ và hậu vị tươi mát. Phù hợp để thưởng thức cùng các món ăn Việt Nam hoặc các món ăn có vị chua ngọt.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Hoàng Thị K",
+          "rating": 5,
+          "date": "10/11/2022",
+          "content": "Rượu vang Lạt này có hương vị đặc trưng của vùng đất Đà Lạt, rất phù hợp với các món ăn Việt Nam. Tôi đặc biệt thích hương thơm của dâu tây và việt quất."
+        },
+        {
+          "id": 2,
+          "name": "Nguyễn Văn L",
+          "rating": 4,
+          "date": "25/11/2022",
+          "content": "Sản phẩm chất lượng tốt, hương vị đặc trưng của vùng đất Đà Lạt. Đóng gói cẩn thận và giao hàng nhanh chóng."
+        }
+      ]
     },
     {
-      "id": 3,
+      "id": 8,
       "name": "RƯỢU VANG RAU",
       "price": 320000,
-      "image": "/src/assets/products/5.jpg",
+      "image": "/src/assets/products/8.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
-      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "featured": false,
+      "bestSelling": true,
+      "new": false,
+      "sale": false,
+      "features": "Rượu vang Rau là một loại rượu vang đặc biệt được làm từ nho và một số loại rau thơm. Đây là loại rượu có hương vị độc đáo và khác biệt so với các loại rượu vang thông thường.\n\nĐặc điểm nổi bật của rượu vang Rau là hương thơm của các loại rau thơm như húng quế, rosemary, và thyme. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn có nhiều rau và gia vị.",
+      "information": "Rượu vang Rau được sản xuất bằng cách ngâm các loại rau thơm trong rượu vang trong một thời gian nhất định. Quá trình này giúp rượu vang hấp thụ hương vị và dưỡng chất từ các loại rau.\n\nSản phẩm này có nồng độ cồn trung bình, vị đậm đà với notes của rau thơm và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món salad, các món ăn có nhiều rau hoặc các món ăn có vị chua.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Trần Thị M",
+          "rating": 4,
+          "date": "05/10/2022",
+          "content": "Rượu vang Rau này có hương vị độc đáo và khác biệt, rất phù hợp với các món salad. Tôi đặc biệt thích hương thơm của húng quế và rosemary."
+        }
+      ]
     },
     {
-      "id": 4,
+      "id": 9,
       "name": "RƯỢU VANG TRẮNG XANH",
       "price": 320000,
       "oldPrice": 370000,
-      "image": "/src/assets/products/6.jpg",
+      "image": "/src/assets/products/9.jpg",
+      "category": "RƯỢU TRẮNG",
+      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore.",
+      "featured": false,
+      "bestSelling": false,
+      "new": true,
+      "sale": false,
+      "features": "Rượu vang Trắng Xanh là một loại rượu vang trắng đặc biệt với màu sắc hơi xanh lục nhẹ. Đây là loại rượu được sản xuất từ nho trắng với kỹ thuật đặc biệt giúp giữ lại một phần màu sắc tự nhiên từ vỏ nho.\n\nĐặc điểm nổi bật của rượu vang Trắng Xanh là hương thơm của táo xanh, chanh và các loại trái cây nhiệt đới. Đây là loại rượu lý tưởng để thưởng thức trong những ngày hè nóng bức.",
+      "information": "Rượu vang Trắng Xanh được sản xuất chủ yếu ở các vùng ôn đới với khí hậu mát mẻ. Quy trình sản xuất đặc biệt giúp giữ lại hương vị tươi mát và màu sắc đặc trưng.\n\nSản phẩm này có nồng độ cồn trung bình, vị chua nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Lê Văn N",
+          "rating": 5,
+          "date": "20/09/2022",
+          "content": "Rượu vang Trắng Xanh này có hương vị tuyệt vời, rất phù hợp với các món hải sản. Tôi đặc biệt thích vị chua nhẹ và hương thơm của táo xanh và chanh."
+        },
+        {
+          "id": 2,
+          "name": "Phạm Thị O",
+          "rating": 4,
+          "date": "05/10/2022",
+          "content": "Sản phẩm chất lượng tốt, hương vị tươi mát và dễ uống. Đóng gói cẩn thận và giao hàng nhanh chóng."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "CHAMPAGNE CLASSIC",
+      "price": 450000,
+      "image": "/src/assets/products/10.jpg",
+      "category": "CHAMPAGNE",
+      "description": "Champagne cao cấp với hương vị tinh tế và bọt ga mịn màng. Sản phẩm lý tưởng cho các dịp lễ kỷ niệm và tiệc tùng sang trọng.",
+      "featured": false,
+      "bestSelling": false,
+      "new": true,
+      "sale": true,
+      "features": "Champagne Classic là một loại rượu vang sủi bọt cao cấp được sản xuất tại vùng Champagne, Pháp. Đây là loại rượu có hương vị tinh tế và bọt ga mịn màng.\n\nĐặc điểm nổi bật của Champagne Classic là hương thơm của táo, lê, và bánh mì nướng. Đây là loại rượu lý tưởng cho các dịp lễ kỷ niệm và tiệc tùng sang trọng.",
+      "information": "Champagne Classic được sản xuất theo phương pháp truyền thống của vùng Champagne, Pháp. Quá trình sản xuất bao gồm việc lên men lần thứ hai trong chai để tạo ra bọt ga tự nhiên.\n\nSản phẩm này có nồng độ cồn trung bình, vị cân bằng giữa chua và ngọt, với bọt ga mịn màng và hậu vị kéo dài. Phù hợp để thưởng thức như một loại aperitif hoặc cùng với các món tráng miệng.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Hoàng Văn P",
+          "rating": 5,
+          "date": "15/08/2022",
+          "content": "Champagne Classic này có hương vị tinh tế và bọt ga mịn màng, rất phù hợp cho các dịp đặc biệt. Tôi đặc biệt thích hương thơm của táo, lê, và bánh mì nướng."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "CHAMPAGNE PREMIUM",
+      "price": 520000,
+      "image": "/src/assets/products/11.jpg",
+      "category": "CHAMPAGNE",
+      "description": "Champagne premium với hương thơm của hoa quả và bánh mì nướng. Vị ngọt nhẹ và độ chua cân bằng tạo nên trải nghiệm thưởng thức tuyệt vời.",
+      "featured": false,
+      "bestSelling": false,
+      "new": false,
+      "sale": true,
+      "features": "Champagne Premium là một loại rượu vang sủi bọt cao cấp được sản xuất tại vùng Champagne, Pháp. Đây là loại rượu có hương vị phong phú và bọt ga mịn màng.\n\nĐặc điểm nổi bật của Champagne Premium là hương thơm của hoa quả chín, bánh mì nướng, và hạt dẻ. Đây là loại rượu lý tưởng cho các dịp đặc biệt và tiệc tùng sang trọng.",
+      "information": "Champagne Premium được sản xuất theo phương pháp truyền thống của vùng Champagne, Pháp, với sự lựa chọn kỹ lưỡng về nho và thời gian ủ lâu hơn. Quá trình sản xuất bao gồm việc lên men lần thứ hai trong chai để tạo ra bọt ga tự nhiên.\n\nSản phẩm này có nồng độ cồn trung bình đến cao, vị cân bằng giữa chua và ngọt, với bọt ga mịn màng và hậu vị kéo dài. Phù hợp để thưởng thức như một loại aperitif hoặc cùng với các món hải sản và phô mai.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Nguyễn Thị Q",
+          "rating": 5,
+          "date": "10/07/2022",
+          "content": "Champagne Premium này có hương vị phong phú và bọt ga mịn màng, rất phù hợp cho các dịp đặc biệt. Tôi đặc biệt thích hương thơm của hoa quả chín và bánh mì nướng."
+        },
+        {
+          "id": 2,
+          "name": "Trần Văn R",
+          "rating": 4,
+          "date": "25/07/2022",
+          "content": "Sản phẩm chất lượng cao, hương vị phong phú và dễ uống. Đóng gói sang trọng và giao hàng nhanh chóng."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "RƯỢU VANG ĐỎ PHÁP",
+      "price": 680000,
+      "oldPrice": 750000,
+      "image": "/src/assets/products/12.jpg",
       "category": "RƯỢU VANG ĐỎ LẠT",
-      "description": "Mauris dolor ut hendrerit ut vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore."
+      "description": "Rượu vang đỏ Pháp cao cấp với hương vị phức tạp của quả mọng đỏ, vani và chút hương gỗ sồi. Lý tưởng để kết hợp với các món thịt đỏ.",
+      "featured": false,
+      "bestSelling": false,
+      "new": true,
+      "sale": false,
+      "features": "Rượu vang đỏ Pháp là loại rượu vang được sản xuất tại Pháp - một quốc gia có truyền thống lâu đời về sản xuất rượu vang. Đây là loại rượu có hương vị phức tạp và đậm đà.\n\nĐặc điểm nổi bật của rượu vang đỏ Pháp là hương thơm của quả mọng đỏ, vani, và chút hương gỗ sồi. Đây là loại rượu lý tưởng để kết hợp với các món thịt đỏ.",
+      "information": "Rượu vang đỏ Pháp được sản xuất từ các giống nho đặc trưng của Pháp như Cabernet Sauvignon, Merlot, và Pinot Noir. Quá trình sản xuất tuân theo các quy định nghiêm ngặt của Pháp về rượu vang.\n\nSản phẩm này có nồng độ cồn cao, vị đậm đà với tannin mạnh và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai lâu năm hoặc các món ăn có nước sốt đậm đà.",
+      "reviews": [
+        {
+          "id": 1,
+          "name": "Lê Thị S",
+          "rating": 5,
+          "date": "05/06/2022",
+          "content": "Rượu vang đỏ Pháp này có hương vị phức tạp và đậm đà, rất phù hợp với các món thịt đỏ. Tôi đặc biệt thích hương thơm của quả mọng đỏ và vani."
+        },
+        {
+          "id": 2,
+          "name": "Phạm Văn T",
+          "rating": 5,
+          "date": "20/06/2022",
+          "content": "Sản phẩm chất lượng cao, hương vị đậm đà và phức tạp. Đóng gói sang trọng và giao hàng nhanh chóng."
+        }
+      ]
     }
   ],
   "introduction": {

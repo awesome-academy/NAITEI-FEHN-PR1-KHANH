@@ -1,51 +1,25 @@
 import { FaShoppingCart } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
-import { type FeaturedProductType } from '../../interfaces/Product'
 import { api } from '../../services/api'
+import type { Product } from '../../interfaces/Product'
 const FeaturedProduct = () => {
-  const [product, setProduct] = useState<FeaturedProductType | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [product, setProduct] = useState<Product | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const getProduct = async () => {
       try {
-        setLoading(true)
         const data = await api.getFeaturedProduct()
         setProduct(data)
         setError(null)
       } catch (err) {
         setError('Failed to load featured product. Please try again later.')
         console.error(err)
-      } finally {
-        setLoading(false)
       }
     }
 
     getProduct()
   }, [])
-
-  if (loading) {
-    return (
-      <section className='py-16 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <div className='bg-white p-8 max-w-4xl mx-auto'>
-            <div className='animate-pulse grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='bg-gray-200 h-96'></div>
-              <div>
-                <div className='h-6 bg-gray-200 rounded w-3/4 mb-4'></div>
-                <div className='h-4 bg-gray-200 rounded w-1/2 mb-6'></div>
-                <div className='h-4 bg-gray-200 rounded w-full mb-2'></div>
-                <div className='h-4 bg-gray-200 rounded w-full mb-2'></div>
-                <div className='h-4 bg-gray-200 rounded w-3/4 mb-6'></div>
-                <div className='h-10 bg-gray-200 rounded w-1/2'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   if (error) {
     return (
@@ -72,7 +46,7 @@ const FeaturedProduct = () => {
               </div>
 
               <div className='flex justify-center items-center h-full'>
-                <img src={product?.image || '/placeholder.svg'} alt={product?.name} className='max-h-96' />
+                <img src={product?.image} alt={product?.name} className='max-h-96' />
               </div>
             </div>
 
@@ -99,20 +73,20 @@ const FeaturedProduct = () => {
 
               <div className='grid grid-cols-4 gap-2 mt-8'>
                 <div className='border border-gray-200 p-2 text-center'>
-                  <div className='text-xl font-bold text-yellow-600'>{product?.countdown.days}</div>
+                  <div className='text-xl font-bold text-yellow-600'>{product?.countdown?.days}</div>
                   <div className='text-xs text-gray-500'>NGÀY</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{23}</div>
-                  <div className='text-xs text-gray-500'>{product?.countdown.hours}</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown?.hours}</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{55}</div>
-                  <div className='text-xs text-gray-500'>{product?.countdown.minutes}</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown?.minutes}</div>
                 </div>
                 <div className='border border-gray-200 p-2 text-center'>
                   <div className='text-xl font-bold text-yellow-600'>{55}</div>
-                  <div className='text-xs text-gray-500'>{product?.countdown.seconds}</div>
+                  <div className='text-xs text-gray-500'>{product?.countdown?.seconds}</div>
                 </div>
               </div>
             </div>

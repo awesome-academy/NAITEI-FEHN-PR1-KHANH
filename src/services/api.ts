@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { FeaturedProductType, IntroductionType, Product } from '../interfaces/Product'
+import type { IntroductionType, Product } from '../interfaces/Product'
 import type { GalleryImage } from '../interfaces/Gallery'
 import type { BlogPost } from '../interfaces/BlogPost'
 import type { Testimonial } from '../interfaces/Testimonial'
@@ -11,14 +11,22 @@ export const api = {
     const response = await axios.get(`${API_URL}/products`)
     return response.data
   },
-
-  getFeaturedProduct: async (): Promise<FeaturedProductType> => {
-    const response = await axios.get(`${API_URL}/featuredProduct`)
-    return response.data
+  getNewProducts: async (limit: number): Promise<Product[]> => {
+    const products = await api.getProducts()
+    const newProducts = products.filter((product) => product.new)
+    return newProducts.slice(0, limit)
   },
-  getBestSellingProducts: async (): Promise<Product[]> => {
-    const response = await axios.get(`${API_URL}/bestSellingProducts`)
-    return response.data
+
+  getFeaturedProduct: async (): Promise<Product> => {
+    const products = await api.getProducts()
+    let featuredProduct = products.find((product) => product.featured) || products[0]
+    return featuredProduct
+  },
+
+  getBestSellingProducts: async (limit: number): Promise<Product[]> => {
+    const products = await api.getProducts()
+    const bestSellingProducts = products.filter((product) => product.bestSelling)
+    return bestSellingProducts.length > 0 ? bestSellingProducts : products.slice(0, limit)
   },
 
   getIntroduction: async (): Promise<IntroductionType> => {
@@ -44,5 +52,29 @@ export const api = {
   getTestimonials: async (): Promise<Testimonial[]> => {
     const response = await axios.get(`${API_URL}/testimonials`)
     return response.data
+  },
+
+  getProductsByCategory: async (category: string): Promise<Product[]> => {
+    const products = await api.getProducts()
+    return products.filter((product) => product.category.toLowerCase().includes(category.toLowerCase()))
+  },
+
+  getRelatedProducts: async (productId: number, limit = 4): Promise<Product[]> => {
+    const products = await api.getProducts()
+    const currentProduct = products.find((p) => p.id === productId)
+
+    if (!currentProduct) {
+      return products.slice(0, limit)
+    }
+
+    const sameCategory = products.filter((p) => p.id !== productId && p.category === currentProduct.category)
+
+    if (sameCategory.length >= limit) {
+      return sameCategory.slice(0, limit)
+    }
+
+    const otherProducts = products.filter((p) => p.id !== productId && p.category !== currentProduct.category)
+
+    return [...sameCategory, ...otherProducts].slice(0, limit)
   }
 }

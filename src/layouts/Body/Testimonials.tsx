@@ -99,7 +99,7 @@ const Testimonials = () => {
           <div className='relative'>
             <div className='w-24 h-24 rounded-full overflow-hidden bg-yellow-100'>
               <img
-                src={currentTestimonial.image || '/placeholder.svg'}
+                src={currentTestimonial.image}
                 alt={currentTestimonial.name}
                 className='w-full h-full object-cover'
               />

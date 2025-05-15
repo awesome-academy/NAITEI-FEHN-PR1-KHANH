@@ -13,9 +13,9 @@ const topNavLinks = [
 
 const navLinks = [
   { to: '/', label: 'TRANG CHỦ' },
-  { to: '/vang-do', label: 'RƯỢU VANG ĐỎ' },
-  { to: '/ruou-trang', label: 'RƯỢU TRẮNG' },
-  { to: '/champagne', label: 'CHAMPAGNE' },
+  { to: '/category/vang-do', label: 'RƯỢU VANG ĐỎ' },
+  { to: '/category/ruou-trang', label: 'RƯỢU TRẮNG' },
+  { to: '/category/champagne', label: 'CHAMPAGNE' },
   { to: '/info', label: 'THÔNG TIN' },
   { to: '/blog', label: 'BLOG' },
   { to: '/contact', label: 'LIÊN HỆ' }
