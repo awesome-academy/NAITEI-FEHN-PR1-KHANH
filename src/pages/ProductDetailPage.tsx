@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { FaHome, FaHeart, FaExchangeAlt, FaEnvelope, FaMinus, FaPlus, FaStar, FaRegStar } from 'react-icons/fa'
 import { api } from '../services/api'
-import type { Product } from '../interfaces/Product'
+import type { Product, Category } from '../interfaces/Product'
 import ProductItem from '../components/ProductItem'
 
 const ProductDetailPage = () => {
   const { productId } = useParams<{ productId: string }>()
   const [product, setProduct] = useState<Product | null>(null)
+  const [category, setCategory] = useState<Category | null>(null)
+  const [subcategory, setSubcategory] = useState<Category | null>(null)
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([])
   const [error, setError] = useState<string | null>(null)
   const [quantity, setQuantity] = useState(1)
@@ -21,11 +23,24 @@ const ProductDetailPage = () => {
         const id = Number.parseInt(productId)
         const productData = await api.getProductById(id)
         setProduct(productData)
+
+        if (productData.categoryId) {
+          const categories = await api.getCategories()
+          const cat = categories.find((c) => c.id === productData.categoryId) || null
+          setCategory(cat)
+
+          if (productData.subcategoryId) {
+            const subcat = categories.find((c) => c.id === productData.subcategoryId) || null
+            setSubcategory(subcat)
+          }
+        }
+
         const relatedData = await api.getRelatedProducts(id, 4)
         setRelatedProducts(relatedData)
         setError(null)
       } catch (err) {
         setError('Failed to load product. Please try again later.')
+        console.error(err)
       }
     }
 
@@ -51,13 +66,22 @@ const ProductDetailPage = () => {
             <Link to='/' className='hover:text-yellow-600 flex items-center'>
               <FaHome className='mr-1' /> Trang chủ
             </Link>
-            <span className='mx-2'>/</span>
-            <Link
-              to={`/category/${product.category.toLowerCase().replace(/\s+/g, '-')}`}
-              className='hover:text-yellow-600'
-            >
-              {product.category}
-            </Link>
+            {category && (
+              <>
+                <span className='mx-2'>/</span>
+                <Link to={`/category/${category.slug}`} className='hover:text-yellow-600'>
+                  {category.name}
+                </Link>
+              </>
+            )}
+            {subcategory && (
+              <>
+                <span className='mx-2'>/</span>
+                <Link to={`/category/${category?.slug}/${subcategory.slug}`} className='hover:text-yellow-600'>
+                  {subcategory.name}
+                </Link>
+              </>
+            )}
             <span className='mx-2'>/</span>
             <span className='text-gray-800'>{product.name}</span>
           </div>

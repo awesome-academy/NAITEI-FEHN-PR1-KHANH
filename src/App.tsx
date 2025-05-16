@@ -32,6 +32,7 @@ function App() {
               }
             />
             <Route path='/category/:categorySlug' element={<CategoryPage />} />
+            <Route path='/category/:categorySlug/:subcategorySlug' element={<CategoryPage />} />
             <Route path='/product/:productId' element={<ProductDetailPage />} />
           </Routes>
         </main>

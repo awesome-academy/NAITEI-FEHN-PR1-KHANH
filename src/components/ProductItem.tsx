@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
-import type { Product } from '../interfaces/Product'
-import { FaHeart, FaShoppingCart } from 'react-icons/fa'
+import { useState, useEffect } from 'react'
+import type { Category, Product } from '../interfaces/Product'
+import { FaHeart, FaShoppingCart, FaExchangeAlt } from 'react-icons/fa'
+import { api } from '../services/api'
 
-const getBadgeColor = (product: Product) => {
+export const getBadgeColor = (product: Product) => {
   if (product.new)
     return {
       color: 'bg-green-500',
@@ -22,8 +24,24 @@ const getBadgeColor = (product: Product) => {
 
 const ProductItem = ({ product }: { product: Product }) => {
   const badge = getBadgeColor(product)
+
+  const [category, setCategory] = useState<Category | null>(null)
+  useEffect(() => {
+    const fetchCategoryNames = async () => {
+      if (product.categoryId) {
+        try {
+          const category = await api.getCategoryById(product.categoryId)
+          setCategory(category)
+        } catch (error) {
+          console.error('Failed to fetch category:', error)
+        }
+      }
+    }
+    fetchCategoryNames()
+  }, [product.categoryId])
+
   return (
-    <div className='bg-white group relative transition duration-300 group-hover:brightness-90'>
+    <div className='bg-white group relative transition duration-300 group-hover:brightness-90 border border-gray-200'>
       {badge && (
         <div className={`absolute top-0 left-0 ${badge.color} text-white p-2 z-10`}>
           <span className='text-xs font-bold uppercase'>{badge.text}</span>
@@ -38,15 +56,20 @@ const ProductItem = ({ product }: { product: Product }) => {
           />
 
           <div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none'>
-            <button className='btn btn-secondary mx-1 pointer-events-auto'>
-              <FaHeart />
-            </button>
+            <div className='flex space-x-2'>
+              <button className='btn btn-secondary mx-1 pointer-events-auto'>
+                <FaHeart />
+              </button>
+              <button className='btn btn-secondary mx-1 pointer-events-auto'>
+                <FaExchangeAlt />
+              </button>
+            </div>
           </div>
         </Link>
 
         <div className='mt-4 text-center'>
-          <Link to={`/category/${product.category}`} className='text-gray-500 text-xs hover:text-yellow-600'>
-            {product.category}
+          <Link to={`/category/${category?.slug}`} className='text-gray-500 text-xs hover:text-yellow-600'>
+            {category?.name}
           </Link>
           <h3 className='mt-1'>
             <Link to={`/product/${product.id}`} className='text-gray-800 font-medium hover:text-yellow-600'>
