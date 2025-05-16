@@ -6,19 +6,27 @@ export interface Product {
   image: string
   category: string
   description: string
-  badge?: {
-    type: 'sale' | 'new' | 'hot'
-    color: string
-  }
-}
-
-export interface FeaturedProductType extends Product {
-  countdown: {
+  featured?: boolean
+  bestSelling?: boolean
+  new?: boolean
+  sale?: boolean
+  countdown?: {
     days: number
     hours: number
     minutes: number
     seconds: number
   }
+  features?: string
+  information?: string
+  reviews?: ProductReview[]
+}
+
+export interface ProductReview {
+  id: number
+  name: string
+  rating: number
+  date: string
+  content: string
 }
 
 export interface IntroductionType {

@@ -1,19 +1,38 @@
 import { Link } from 'react-router-dom'
 import type { Product } from '../interfaces/Product'
 import { FaHeart, FaShoppingCart } from 'react-icons/fa'
+
+const getBadgeColor = (product: Product) => {
+  if (product.new)
+    return {
+      color: 'bg-green-500',
+      text: 'NEW'
+    }
+  else if (product.featured)
+    return {
+      color: 'bg-red-500',
+      text: 'HOT'
+    }
+  else if (product.sale)
+    return {
+      color: 'bg-yellow-500',
+      text: 'SALE'
+    }
+}
+
 const ProductItem = ({ product }: { product: Product }) => {
+  const badge = getBadgeColor(product)
   return (
     <div className='bg-white group relative transition duration-300 group-hover:brightness-90'>
-      {product.badge && (
-        <div className={`absolute top-0 left-0 ${product.badge.color} text-white p-2 z-10`}>
-          <span className='text-xs font-bold uppercase'>{product.badge.type}</span>
+      {badge && (
+        <div className={`absolute top-0 left-0 ${badge.color} text-white p-2 z-10`}>
+          <span className='text-xs font-bold uppercase'>{badge.text}</span>
         </div>
       )}
-
       <div className='p-4'>
         <Link to={`/product/${product.id}`} className='block relative overflow-hidden'>
           <img
-            src={product.image || '/placeholder.svg'}
+            src={product.image}
             alt={product.name}
             className='mx-auto h-64 object-contain transition-transform duration-300 group-hover:scale-105'
           />

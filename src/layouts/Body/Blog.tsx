@@ -78,7 +78,7 @@ const Blog = () => {
           <div key={post.id} className='group'>
             <Link to={`/blog/${post.id}`} className='block overflow-hidden mb-4'>
               <img
-                src={post.image || '/placeholder.svg'}
+                src={post.image}
                 alt={post.title}
                 className='w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105'
               />
