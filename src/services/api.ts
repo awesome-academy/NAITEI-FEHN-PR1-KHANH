@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { IntroductionType, Product } from '../interfaces/Product'
+import type { IntroductionType, Product, Category, Tag } from '../interfaces/Product'
 import type { GalleryImage } from '../interfaces/Gallery'
 import type { BlogPost } from '../interfaces/BlogPost'
 import type { Testimonial } from '../interfaces/Testimonial'
@@ -11,6 +11,32 @@ export const api = {
     const response = await axios.get(`${API_URL}/products`)
     return response.data
   },
+
+  getCategories: async (): Promise<Category[]> => {
+    const response = await axios.get(`${API_URL}/categories`)
+    return response.data
+  },
+
+  getMainCategories: async (): Promise<Category[]> => {
+    const categories = await api.getCategories()
+    return categories.filter((category) => !category.parentId)
+  },
+
+  getSubcategories: async (categoryId: string): Promise<Category[]> => {
+    const categories = await api.getCategories()
+    return categories.filter((category) => category.parentId === categoryId)
+  },
+
+  getCategoryBySlug: async (slug: string): Promise<Category | null> => {
+    const categories = await api.getCategories()
+    return categories.find((category) => category.slug === slug) || null
+  },
+
+  getTags: async (): Promise<Tag[]> => {
+    const response = await axios.get(`${API_URL}/tags`)
+    return response.data
+  },
+
   getNewProducts: async (limit: number): Promise<Product[]> => {
     const products = await api.getProducts()
     const newProducts = products.filter((product) => product.new)
@@ -19,7 +45,7 @@ export const api = {
 
   getFeaturedProduct: async (): Promise<Product> => {
     const products = await api.getProducts()
-    let featuredProduct = products.find((product) => product.featured) || products[0]
+    const featuredProduct = products.find((product) => product.featured) || products[0]
     return featuredProduct
   },
 
@@ -54,9 +80,14 @@ export const api = {
     return response.data
   },
 
-  getProductsByCategory: async (category: string): Promise<Product[]> => {
+  getProductsByCategory: async (categoryId: string): Promise<Product[]> => {
     const products = await api.getProducts()
-    return products.filter((product) => product.category.toLowerCase().includes(category.toLowerCase()))
+    return products.filter((product) => product.categoryId === categoryId)
+  },
+
+  getProductsBySubcategory: async (subcategoryId: string): Promise<Product[]> => {
+    const products = await api.getProducts()
+    return products.filter((product) => product.subcategoryId === subcategoryId)
   },
 
   getRelatedProducts: async (productId: number, limit = 4): Promise<Product[]> => {
@@ -67,14 +98,32 @@ export const api = {
       return products.slice(0, limit)
     }
 
-    const sameCategory = products.filter((p) => p.id !== productId && p.category === currentProduct.category)
+    const sameSubcategory = products.filter(
+      (p) => p.id !== productId && p.subcategoryId === currentProduct.subcategoryId
+    )
 
-    if (sameCategory.length >= limit) {
-      return sameCategory.slice(0, limit)
+    if (sameSubcategory.length >= limit) {
+      return sameSubcategory.slice(0, limit)
     }
 
-    const otherProducts = products.filter((p) => p.id !== productId && p.category !== currentProduct.category)
+    const sameCategory = products.filter(
+      (p) =>
+        p.id !== productId &&
+        p.categoryId === currentProduct.categoryId &&
+        p.subcategoryId !== currentProduct.subcategoryId
+    )
 
-    return [...sameCategory, ...otherProducts].slice(0, limit)
+    if (sameSubcategory.length + sameCategory.length >= limit) {
+      return [...sameSubcategory, ...sameCategory].slice(0, limit)
+    }
+
+    const otherProducts = products.filter((p) => p.id !== productId && p.categoryId !== currentProduct.categoryId)
+
+    return [...sameSubcategory, ...sameCategory, ...otherProducts].slice(0, limit)
+  },
+
+  getCategoryById: async (categoryId: string): Promise<Category | null> => {
+    const categories = await api.getCategories()
+    return categories.find((category) => category.id === categoryId) || null
   }
 }

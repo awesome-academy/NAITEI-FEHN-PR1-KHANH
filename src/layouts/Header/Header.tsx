@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaBars, FaSearch, FaTimes } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
+import { api } from '../../services/api'
+import type { Category } from '../../interfaces/Product'
 
 const topNavLinks = [
   { to: '/account', label: 'Tài khoản của tôi' },
@@ -11,18 +13,39 @@ const topNavLinks = [
   { to: '/register', label: 'Đăng ký' }
 ]
 
-const navLinks = [
-  { to: '/', label: 'TRANG CHỦ' },
-  { to: '/category/vang-do', label: 'RƯỢU VANG ĐỎ' },
-  { to: '/category/ruou-trang', label: 'RƯỢU TRẮNG' },
-  { to: '/category/champagne', label: 'CHAMPAGNE' },
-  { to: '/info', label: 'THÔNG TIN' },
-  { to: '/blog', label: 'BLOG' },
-  { to: '/contact', label: 'LIÊN HỆ' }
-]
-
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mainCategories, setMainCategories] = useState<Category[]>([])
+  const [subcategories, setSubcategories] = useState<Record<string, Category[]>>({})
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const mainCats = await api.getMainCategories()
+        setMainCategories(mainCats)
+
+        const subCats: Record<string, Category[]> = {}
+        for (const cat of mainCats) {
+          const subs = await api.getSubcategories(cat.id)
+          subCats[cat.id] = subs
+        }
+        setSubcategories(subCats)
+      } catch (error) {
+        console.error('Failed to fetch categories:', error)
+      }
+    }
+
+    fetchCategories()
+  }, [])
+
+  const handleCategoryHover = (categoryId: string) => {
+    setActiveCategory(categoryId)
+  }
+
+  const handleMouseLeave = () => {
+    setActiveCategory(null)
+  }
 
   return (
     <header className='w-full relative'>
@@ -88,20 +111,91 @@ const Header = () => {
             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
 
-          <nav className='hidden md:block flex-1'>
+          <nav className='hidden md:block flex-1 relative'>
             <ul className='flex justify-center items-center space-x-4 lg:space-x-8'>
-              {navLinks.map((link, idx) => (
-                <li key={idx}>
+              <li>
+                <NavLink
+                  to='/'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  TRANG CHỦ
+                </NavLink>
+              </li>
+
+              {mainCategories.map((category) => (
+                <li
+                  key={category.id}
+                  onMouseEnter={() => handleCategoryHover(category.id)}
+                  onMouseLeave={handleMouseLeave}
+                  className='relative'
+                >
                   <NavLink
-                    to={link.to}
+                    to={`/category/${category.slug}`}
                     className={({ isActive }) =>
                       `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
                     }
                   >
-                    {link.label}
+                    {category.name}
                   </NavLink>
+
+                  {activeCategory === category.id && subcategories[category.id]?.length > 0 && (
+                    <div className='absolute left-0 mt-0 w-[500px] bg-white shadow-lg z-50 py-4 px-6 flex'>
+                      <div className='grid grid-cols-2 gap-4 w-3/4'>
+                        {subcategories[category.id].map((subcategory) => (
+                          <div key={subcategory.id}>
+                            <NavLink
+                              to={`/category/${category.slug}/${subcategory.slug}`}
+                              className='block text-gray-800 font-medium hover:text-yellow-600 mb-2'
+                            >
+                              {subcategory.name} ({subcategory.count ?? 0})
+                            </NavLink>
+                          </div>
+                        ))}
+                      </div>
+                      <div className='w-1/4'>
+                        <img
+                          src='/src/assets/gallery/wine-barrel.jpg'
+                          alt='Wine barrels'
+                          className='w-full h-48 object-cover'
+                        />
+                      </div>
+                    </div>
+                  )}
                 </li>
               ))}
+
+              <li>
+                <NavLink
+                  to='/info'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  THÔNG TIN
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/blog'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  BLOG
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/contact'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  LIÊN HỆ
+                </NavLink>
+              </li>
             </ul>
           </nav>
 
@@ -111,18 +205,79 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className='md:hidden bg-black border-t border-gray-800'>
             <ul className='py-2'>
-              {navLinks.map((link, idx) => (
-                <li key={idx}>
+              <li>
+                <NavLink
+                  to='/'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  TRANG CHỦ
+                </NavLink>
+              </li>
+
+              {mainCategories.map((category) => (
+                <li key={category.id}>
                   <NavLink
-                    to={link.to}
+                    to={`/category/${category.slug}`}
                     className={({ isActive }) =>
                       `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
                     }
                   >
-                    {link.label}
+                    {category.name}
                   </NavLink>
+
+                  {subcategories[category.id]?.length > 0 && (
+                    <ul className='pl-4 bg-gray-900'>
+                      {subcategories[category.id].map((subcategory) => (
+                        <li key={subcategory.id}>
+                          <NavLink
+                            to={`/category/${category.slug}/${subcategory.slug}`}
+                            className={({ isActive }) =>
+                              `block py-2 px-4 text-gray-300 hover:text-yellow-400 text-sm ${
+                                isActive ? 'text-yellow-400' : ''
+                              }`
+                            }
+                          >
+                            {subcategory.name} ({subcategory.count ?? 0})
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
+
+              <li>
+                <NavLink
+                  to='/info'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  THÔNG TIN
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/blog'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  BLOG
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/contact'
+                  className={({ isActive }) =>
+                    `block py-2 px-4 text-white hover:text-yellow-400 ${isActive ? 'text-yellow-400' : ''}`
+                  }
+                >
+                  LIÊN HỆ
+                </NavLink>
+              </li>
             </ul>
           </div>
         )}
