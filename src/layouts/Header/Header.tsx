@@ -1,19 +1,12 @@
 import { useState, useEffect } from 'react'
-import { FaBars, FaSearch, FaTimes } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
+import { FaBars, FaSearch, FaTimes, FaUser, FaSignOutAlt } from 'react-icons/fa'
+import { NavLink, Link } from 'react-router-dom'
 import { api } from '../../services/api'
 import type { Category } from '../../interfaces/Product'
-
-const topNavLinks = [
-  { to: '/account', label: 'Tài khoản của tôi' },
-  { to: '/order-status', label: 'Trang thái đơn hàng' },
-  { to: '/return-policy', label: 'Chính sách trả hàng' },
-  { to: '/cart', label: 'Giỏ hàng' },
-  { to: '/login', label: 'Đăng nhập' },
-  { to: '/register', label: 'Đăng ký' }
-]
+import { useAuth } from '../../contexts/AuthContext'
 
 const Header = () => {
+  const { currentUser, isAuthenticated, logout } = useAuth()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mainCategories, setMainCategories] = useState<Category[]>([])
   const [subcategories, setSubcategories] = useState<Record<string, Category[]>>({})
@@ -47,6 +40,17 @@ const Header = () => {
     setActiveCategory(null)
   }
 
+  const handleLogout = () => {
+    logout()
+  }
+
+  const topNavLinks = [
+    { to: '/account', label: 'Tài khoản của tôi' },
+    { to: '/order-status', label: 'Trang thái đơn hàng' },
+    { to: '/return-policy', label: 'Chính sách trả hàng' },
+    { to: '/cart', label: 'Giỏ hàng' }
+  ]
+
   return (
     <header className='w-full relative'>
       <div className='relative overflow-hidden'>
@@ -72,6 +76,47 @@ const Header = () => {
                   {label}
                 </NavLink>
               ))}
+
+              {isAuthenticated ? (
+                <>
+                  <Link
+                    to='/profile'
+                    className='top-nav-link my-1 transition-colors text-white hover:text-yellow-400 flex items-center'
+                  >
+                    <FaUser className='mr-1' />
+                    {currentUser?.firstName}
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className='top-nav-link my-1 transition-colors text-white hover:text-yellow-400 flex items-center'
+                  >
+                    <FaSignOutAlt className='mr-1' /> Đăng xuất
+                  </button>
+                </>
+              ) : (
+                <>
+                  <NavLink
+                    to='/login'
+                    className={({ isActive }) =>
+                      `top-nav-link my-1 transition-colors ${
+                        isActive ? 'text-yellow-400' : 'hover:text-yellow-400 text-white'
+                      }`
+                    }
+                  >
+                    Đăng nhập
+                  </NavLink>
+                  <NavLink
+                    to='/register'
+                    className={({ isActive }) =>
+                      `top-nav-link my-1 transition-colors ${
+                        isActive ? 'text-yellow-400' : 'hover:text-yellow-400 text-white'
+                      }`
+                    }
+                  >
+                    Đăng ký
+                  </NavLink>
+                </>
+              )}
             </div>
 
             <div className='relative w-full md:w-auto mt-2 md:mt-0'>
@@ -103,8 +148,10 @@ const Header = () => {
       <div className='bg-black'>
         <div className='container mx-auto px-4 flex items-center justify-between'>
           <div className='py-3 text-yellow-400 font-semibold'>
-            <span className='text-lg'>Wine House</span>
-            <span className='text-xs block'>Since 1980</span>
+            <Link to='/' className='block'>
+              <span className='text-lg'>Wine House</span>
+              <span className='text-xs block'>Since 1980</span>
+            </Link>
           </div>
 
           <button className='md:hidden text-white p-2' onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
