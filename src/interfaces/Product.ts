@@ -4,7 +4,8 @@ export interface Product {
   price: number
   oldPrice?: number
   image: string
-  category: string
+  categoryId: string
+  subcategoryId?: string
   description: string
   featured?: boolean
   bestSelling?: boolean
@@ -19,6 +20,7 @@ export interface Product {
   features?: string
   information?: string
   reviews?: ProductReview[]
+  tags?: string[]
 }
 
 export interface ProductReview {
@@ -32,4 +34,19 @@ export interface ProductReview {
 export interface IntroductionType {
   title: string
   content: string
+}
+
+export interface Category {
+  id: string
+  name: string
+  slug: string
+  parentId?: string
+  count?: number
+}
+
+export interface Tag {
+  id: string
+  name: string
+  slug: string
+  count: number
 }
