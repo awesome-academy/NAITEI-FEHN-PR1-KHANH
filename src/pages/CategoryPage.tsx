@@ -234,7 +234,7 @@ const CategoryPage = () => {
             ) : (
               <div className='space-y-6'>
                 {products.map((product) => (
-                  <ProductColumnItem product={product} />
+                  <ProductColumnItem key={product.id} product={product} />
                 ))}
               </div>
             )}
