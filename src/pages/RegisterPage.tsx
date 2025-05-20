@@ -85,7 +85,6 @@ const RegisterPage = () => {
       })
       toast.success('Đăng ký thành công!')
       setTimeout(() => {
-        console.log('Redirecting...')
         navigate('/login')
       }, 500)
     } catch (error) {
