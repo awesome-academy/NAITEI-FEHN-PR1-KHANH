@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { FaBars, FaSearch, FaTimes, FaUser, FaSignOutAlt } from 'react-icons/fa'
+import { FaBars, FaSearch, FaTimes, FaUser, FaSignOutAlt, FaShoppingCart } from 'react-icons/fa'
 import { NavLink, Link } from 'react-router-dom'
 import { api } from '../../services/api'
 import type { Category } from '../../interfaces/Product'
 import { useAuth } from '../../contexts/AuthContext'
+import { cartService } from '../../services/cartService'
 
 const Header = () => {
   const { currentUser, isAuthenticated, logout } = useAuth()
@@ -11,6 +12,7 @@ const Header = () => {
   const [mainCategories, setMainCategories] = useState<Category[]>([])
   const [subcategories, setSubcategories] = useState<Record<string, Category[]>>({})
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
+  const [cartItemCount, setCartItemCount] = useState(0)
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -31,6 +33,21 @@ const Header = () => {
 
     fetchCategories()
   }, [])
+
+  useEffect(() => {
+    const fetchCartItemCount = async () => {
+      if (isAuthenticated && currentUser?.id) {
+        const cartItems = await cartService.getCartItems(String(currentUser.id))
+        setCartItemCount(cartItems.reduce((total, item) => total + item.quantity, 0))
+      } else {
+        setCartItemCount(0)
+      }
+    }
+
+    if (isAuthenticated && currentUser?.id) {
+      fetchCartItemCount()
+    }
+  }, [isAuthenticated, currentUser])
 
   const handleCategoryHover = (categoryId: string) => {
     setActiveCategory(categoryId)
@@ -119,15 +136,26 @@ const Header = () => {
               )}
             </div>
 
-            <div className='relative w-full md:w-auto mt-2 md:mt-0'>
-              <input
-                type='text'
-                placeholder='Tìm kiếm ở đây...'
-                className='py-1 px-3 pr-8 text-xs bg-transparent border border-gray-600 rounded text-white placeholder-gray-400 w-full md:w-48'
-              />
-              <button className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400'>
-                <FaSearch size={14} />
-              </button>
+            <div className='flex items-center space-x-4'>
+              <div className='relative'>
+                <input
+                  type='text'
+                  placeholder='Tìm kiếm ở đây...'
+                  className='py-1 px-3 pr-8 text-xs bg-transparent border border-gray-600 rounded text-white placeholder-gray-400 w-full md:w-48'
+                />
+                <button className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400'>
+                  <FaSearch size={14} />
+                </button>
+              </div>
+
+              <Link to='/cart' className='relative'>
+                <FaShoppingCart className='text-white hover:text-yellow-400 transition-colors' size={18} />
+                {cartItemCount > 0 && (
+                  <span className='absolute -top-2 -right-2 bg-yellow-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center'>
+                    {cartItemCount}
+                  </span>
+                )}
+              </Link>
             </div>
           </div>
         </div>
