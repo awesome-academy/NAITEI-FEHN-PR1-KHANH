@@ -40,7 +40,6 @@ const ProductDetailPage = () => {
         setError(null)
       } catch (err) {
         setError('Failed to load product. Please try again later.')
-        console.error(err)
       }
     }
 

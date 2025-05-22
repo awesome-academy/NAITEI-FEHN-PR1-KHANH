@@ -5,6 +5,7 @@ import { api } from '../../services/api'
 import type { Category } from '../../interfaces/Product'
 import { useAuth } from '../../contexts/AuthContext'
 import { cartService } from '../../services/cartService'
+import { toast } from 'react-toastify'
 
 const Header = () => {
   const { currentUser, isAuthenticated, logout } = useAuth()
@@ -27,7 +28,7 @@ const Header = () => {
         }
         setSubcategories(subCats)
       } catch (error) {
-        console.error('Failed to fetch categories:', error)
+        toast.error('Failed to load categories')
       }
     }
 

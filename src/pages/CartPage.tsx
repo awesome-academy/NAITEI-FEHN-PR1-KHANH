@@ -146,7 +146,7 @@ const CartPage = () => {
                       <td className='border border-gray-200 p-3 text-center'>
                         <Link to={`/product/${item.product.id}`}>
                           <img
-                            src={item.product.image || '/placeholder.svg'}
+                            src={item.product.image}
                             alt={item.product.name}
                             className='w-20 h-20 object-contain mx-auto'
                           />

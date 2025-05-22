@@ -6,22 +6,17 @@ import { FaQuoteRight } from 'react-icons/fa'
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const intervalRef = useRef<number | null>(null)
 
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        setLoading(true)
         const data = await api.getTestimonials()
         setTestimonials(data)
         setError(null)
       } catch (err) {
         setError('Failed to load testimonials. Please try again later.')
-        console.error(err)
-      } finally {
-        setLoading(false)
       }
     }
 
@@ -43,29 +38,6 @@ const Testimonials = () => {
   }, [testimonials])
 
   const currentTestimonial = testimonials[currentIndex]
-
-  if (loading) {
-    return (
-      <div>
-        <div className='text-center mb-8'>
-          <h2 className='text-3xl font-light text-gray-800 uppercase tracking-wider'>KHÁCH HÀNG</h2>
-          <div className='flex justify-center mt-2'>
-            <img src='/src/assets/title-dark.png' alt='Divider' className='h-4' />
-          </div>
-        </div>
-        <div className='max-w-md mx-auto animate-pulse'>
-          <div className='flex justify-center mb-6'>
-            <div className='h-20 w-20 bg-gray-200 rounded-full'></div>
-          </div>
-          <div className='h-4 bg-gray-200 rounded w-full mx-auto mb-2'></div>
-          <div className='h-4 bg-gray-200 rounded w-full mx-auto mb-2'></div>
-          <div className='h-4 bg-gray-200 rounded w-3/4 mx-auto mb-4'></div>
-          <div className='h-6 bg-gray-200 rounded w-1/4 mx-auto mb-2'></div>
-          <div className='h-4 bg-gray-200 rounded w-1/3 mx-auto'></div>
-        </div>
-      </div>
-    )
-  }
 
   if (error) {
     return (

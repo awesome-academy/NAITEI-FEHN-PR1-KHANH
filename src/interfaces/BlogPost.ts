@@ -6,4 +6,5 @@ export interface BlogPost {
   excerpt: string
   content: string
   author?: string
+  lastVideo: string
 }

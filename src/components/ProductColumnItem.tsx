@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { api } from '../services/api'
 import { FaExchangeAlt, FaHeart, FaShoppingCart } from 'react-icons/fa'
 import { getBadgeColor } from './ProductItem'
+import { toast } from 'react-toastify'
 
 const ProductColumnItem = ({ product }: { product: Product }) => {
   const badge = getBadgeColor(product)
@@ -15,7 +16,7 @@ const ProductColumnItem = ({ product }: { product: Product }) => {
           const category = await api.getCategoryById(product.categoryId)
           setCategory(category)
         } catch (error) {
-          console.error('Failed to fetch category:', error)
+          toast.error('Failed to fetch category names')
         }
       }
     }

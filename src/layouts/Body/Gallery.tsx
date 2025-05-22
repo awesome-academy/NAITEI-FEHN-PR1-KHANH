@@ -5,40 +5,21 @@ import { api } from '../../services/api'
 
 const Gallery = () => {
   const [images, setImages] = useState<GalleryImage[]>([])
-  const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchGalleryImages = async () => {
       try {
-        setLoading(true)
         const data = await api.getGalleryImages()
         setImages(data)
         setError(null)
       } catch (err) {
         setError('Failed to load gallery images. Please try again later.')
-        console.error(err)
-      } finally {
-        setLoading(false)
       }
     }
 
     fetchGalleryImages()
   }, [])
-
-  if (loading) {
-    return (
-      <section className='py-8 bg-white'>
-        <div className='w-screen max-w-none px-0'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-1'>
-            {[...Array(8)].map((_, index) => (
-              <div key={index} className='h-64 bg-gray-200 animate-pulse'></div>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   if (error) {
     return (

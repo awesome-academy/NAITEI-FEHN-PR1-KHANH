@@ -14,7 +14,6 @@ const FeaturedProduct = () => {
         setError(null)
       } catch (err) {
         setError('Failed to load featured product. Please try again later.')
-        console.error(err)
       }
     }
 
