@@ -12,6 +12,8 @@ import ProductDetailPage from './pages/ProductDetailPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import CartPage from './pages/CartPage'
+import BlogPage from './pages/BlogPage'
+import BlogDetailPage from './pages/BlogDetailPage'
 import { AuthProvider } from './contexts/AuthContext'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -44,6 +46,8 @@ function App() {
               <Route path='/login' element={<LoginPage />} />
               <Route path='/register' element={<RegisterPage />} />
               <Route path='/cart' element={<CartPage />} />
+              <Route path='/blog' element={<BlogPage />} />
+              <Route path='/blog/:blogId' element={<BlogDetailPage />} />
             </Routes>
           </main>
           <Footer />

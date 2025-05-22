@@ -57,7 +57,6 @@ const CategoryPage = () => {
         }
       } catch (err) {
         setError('Failed to load products. Please try again later.')
-        console.error(err)
       }
     }
 

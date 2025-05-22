@@ -60,8 +60,9 @@ export const api = {
     return response.data
   },
 
-  getProductById: async (id: number): Promise<Product> => {
-    const response = await axios.get(`${API_URL}/products/${id}`)
+  getProductById: async (id: string | number): Promise<Product> => {
+    const numericId = typeof id === 'string' ? Number(id) : id
+    const response = await axios.get(`${API_URL}/products/${numericId}`)
     return response.data
   },
 
