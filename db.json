@@ -863,5 +863,183 @@
         }
       ]
     }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "3",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "17/06/2015",
+      "createdDate": "14/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 7,
+      "totalAmount": 350000,
+      "status": "completed"
+    },
+    {
+      "id": "7",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "15/06/2015",
+      "createdDate": "12/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 3,
+      "totalAmount": 250000,
+      "status": "canceled"
+    },
+    {
+      "id": "8",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "14/06/2015",
+      "createdDate": "11/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 2,
+      "totalAmount": 150000,
+      "status": "canceled"
+    },
+    {
+      "id": "9",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "13/06/2015",
+      "createdDate": "10/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 1,
+      "totalAmount": 680000,
+      "status": "canceled"
+    },
+    {
+      "id": "10",
+      "userId": "1",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "12/06/2015",
+      "createdDate": "09/03/2015",
+      "warehouse": "HÀ ĐÔNG",
+      "totalItems": 4,
+      "totalAmount": 200000,
+      "status": "canceled"
+    },
+    {
+      "id": "11",
+      "userId": "2",
+      "orderNumber": "TESTUSER123",
+      "orderDate": "10/06/2015",
+      "createdDate": "07/03/2015",
+      "warehouse": "HÀ NỘI",
+      "totalItems": 2,
+      "totalAmount": 166000,
+      "status": "completed"
+    },
+    {
+      "id": "12",
+      "userId": "2",
+      "orderNumber": "TESTUSER123",
+      "orderDate": "09/06/2015",
+      "createdDate": "06/03/2015",
+      "warehouse": "HÀ NỘI",
+      "totalItems": 3,
+      "totalAmount": 429000,
+      "status": "canceled"
+    },
+    {
+      "id": "13",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG123",
+      "orderDate": "08/06/2015",
+      "createdDate": "05/03/2015",
+      "warehouse": "HÀ NỘI",
+      "totalItems": 5,
+      "totalAmount": 640000,
+      "status": "completed"
+    },
+    {
+      "id": "14",
+      "userId": "06f2",
+      "orderNumber": "KHANHDANG123",
+      "orderDate": "07/06/2015",
+      "createdDate": "04/03/2015",
+      "warehouse": "HÀ NỘI",
+      "totalItems": 3,
+      "totalAmount": 320000,
+      "status": "canceled"
+    },
+    {
+      "id": "15",
+      "userId": "158c",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "06/06/2015",
+      "createdDate": "03/03/2015",
+      "warehouse": "HỒ CHÍ MINH",
+      "totalItems": 2,
+      "totalAmount": 320000,
+      "status": "completed"
+    },
+    {
+      "id": "16",
+      "userId": "158c",
+      "orderNumber": "KHANHDANG456",
+      "orderDate": "05/06/2015",
+      "createdDate": "02/03/2015",
+      "warehouse": "HỒ CHÍ MINH",
+      "totalItems": 1,
+      "totalAmount": 320000,
+      "status": "canceled"
+    }
   ]
 }

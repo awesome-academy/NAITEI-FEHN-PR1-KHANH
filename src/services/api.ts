@@ -3,6 +3,7 @@ import type { IntroductionType, Product, Category, Tag } from '../interfaces/Pro
 import type { GalleryImage } from '../interfaces/Gallery'
 import type { BlogPost } from '../interfaces/BlogPost'
 import type { Testimonial } from '../interfaces/Testimonial'
+import type { User } from '../interfaces/User'
 
 const API_URL = 'http://localhost:3001'
 
@@ -126,5 +127,9 @@ export const api = {
   getCategoryById: async (categoryId: string): Promise<Category | null> => {
     const categories = await api.getCategories()
     return categories.find((category) => category.id === categoryId) || null
+  },
+  getUserById: async (userId: string): Promise<User | null> => {
+    const response = await axios.get(`${API_URL}/users/${userId}`)
+    return response.data
   }
 }
