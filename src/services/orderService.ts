@@ -1,8 +1,7 @@
 import axios from 'axios'
 import type { Order, OrderStatusCount } from '../interfaces/Order'
 import { ORDER_STATUS } from '../constants/order'
-
-const API_URL = 'http://localhost:3001'
+import { API_URL } from './api'
 
 export const orderService = {
   async getOrdersByUserId(userId: string): Promise<Order[]> {

@@ -5,7 +5,7 @@ import type { BlogPost } from '../interfaces/BlogPost'
 import type { Testimonial } from '../interfaces/Testimonial'
 import type { User } from '../interfaces/User'
 
-const API_URL = 'http://localhost:3001'
+export const API_URL = 'http://localhost:3001'
 
 export const api = {
   getProducts: async (): Promise<Product[]> => {

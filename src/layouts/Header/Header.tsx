@@ -65,7 +65,7 @@ const Header = () => {
   const topNavLinks = [
     { to: '/account', label: 'Tài khoản của tôi' },
     { to: '/orders', label: 'Đơn hàng của tôi' },
-    { to: '/return-policy', label: 'Chính sách trả hàng' },
+    { to: '/addresses', label: 'Địa chỉ giao hàng' },
     { to: '/cart', label: 'Giỏ hàng' }
   ]
 

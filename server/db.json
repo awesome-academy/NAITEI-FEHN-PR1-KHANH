@@ -142,7 +142,10 @@
       "bestSelling": true,
       "new": false,
       "sale": true,
-      "tags": ["tag1", "alcohol"],
+      "tags": [
+        "tag1",
+        "alcohol"
+      ],
       "features": "Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được những đôi cao gót đẹp. Sau đây là những mẹo giúp bạn có thể tự tin đi giày cao gót.\n\nTrong những ngày hè, các chị em thường có xu hướng chọn cho mình những đôi giày cao gót có quai mảnh, nhưng điều này lại càng làm lộ đôi chân to của bạn. Thay vào đó, hãy chọn những đôi giày có quai to bản hoặc bít mũi, điều này sẽ giúp đôi chân bạn trông thon gọn hơn.",
       "information": "Rượu vang đỏ có nhiều loại, mỗi loại mang hương vị và đặc trưng riêng. Rượu vang đỏ được làm từ nho đỏ, được ủ và lên men theo quy trình nghiêm ngặt.\n\nSản phẩm này có nồng độ cồn vừa phải, hương vị đậm đà với notes của quả mọng đỏ, vani và chút hương gỗ sồi. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai hoặc đơn giản là nhâm nhi trong những buổi tối thư giãn.",
       "reviews": [
@@ -168,7 +171,10 @@
       "bestSelling": false,
       "new": true,
       "sale": true,
-      "tags": ["alcohol", "cheap"],
+      "tags": [
+        "alcohol",
+        "cheap"
+      ],
       "features": "Rượu vang xanh là một loại rượu vang trắng đặc biệt với màu sắc hơi xanh lục nhẹ. Đây là loại rượu được sản xuất từ nho trắng với kỹ thuật đặc biệt giúp giữ lại một phần màu sắc tự nhiên từ vỏ nho.\n\nHương vị của rượu vang xanh thường tươi mát với notes của táo xanh, chanh và các loại trái cây nhiệt đới. Đây là loại rượu lý tưởng để thưởng thức trong những ngày hè nóng bức.",
       "information": "Rượu vang xanh được sản xuất chủ yếu ở các vùng ôn đới với khí hậu mát mẻ. Quy trình sản xuất đặc biệt giúp giữ lại hương vị tươi mát và màu sắc đặc trưng.\n\nSản phẩm này có nồng độ cồn trung bình, vị chua nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
       "reviews": [
@@ -201,7 +207,10 @@
       "bestSelling": false,
       "new": false,
       "sale": true,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Rượu vang vàng là loại rượu vang được làm từ nho trắng với quá trình lên men đặc biệt tạo ra màu vàng đặc trưng. Loại rượu này thường có hương vị phong phú và đậm đà hơn so với rượu vang trắng thông thường.\n\nĐặc điểm nổi bật của rượu vang vàng là hương thơm của mật ong, hoa cỏ và trái cây chín. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn có vị đậm đà.",
       "information": "Rượu vang vàng được sản xuất bằng cách để vỏ nho tiếp xúc với nước nho trong thời gian ngắn, tạo ra màu vàng đặc trưng. Quá trình lên men thường diễn ra trong thùng gỗ sồi để tạo thêm hương vị.\n\nSản phẩm này có nồng độ cồn trung bình đến cao, vị ngọt nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt trắng, hải sản hoặc các món ăn có nước sốt kem.",
       "reviews": [
@@ -227,7 +236,10 @@
       "bestSelling": false,
       "new": true,
       "sale": true,
-      "tags": ["tag29", "cheap"],
+      "tags": [
+        "tag29",
+        "cheap"
+      ],
       "features": "Rượu vang trắng là loại rượu vang được làm từ nho trắng hoặc nho đỏ nhưng không để vỏ nho tiếp xúc với nước nho trong quá trình lên men. Đây là loại rượu có màu sắc từ trong suốt đến vàng nhạt.\n\nĐặc điểm nổi bật của rượu vang trắng là hương thơm của trái cây như táo, lê, đào và các loại hoa. Đây là loại rượu thích hợp để thưởng thức trong những ngày nóng hoặc khi ăn các món nhẹ.",
       "information": "Rượu vang trắng được sản xuất bằng cách ép nho và lên men nước nho mà không có vỏ. Quá trình lên men thường diễn ra ở nhiệt độ thấp để giữ hương vị tươi mát.\n\nSản phẩm này có nồng độ cồn thấp đến trung bình, vị chua nhẹ và hậu vị tươi mát. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
       "reviews": [
@@ -265,7 +277,10 @@
       "bestSelling": false,
       "new": false,
       "sale": false,
-      "tags": ["tag29", "premium"],
+      "tags": [
+        "tag29",
+        "premium"
+      ],
       "features": "Rượu nho năm 1987 là một loại rượu vang vintage đặc biệt, được sản xuất từ nho thu hoạch trong năm 1987 - một năm được đánh giá là có điều kiện thời tiết lý tưởng cho việc trồng nho.\n\nĐặc điểm nổi bật của rượu vang vintage này là hương vị phức tạp đã phát triển qua thời gian, với notes của trái cây khô, da thuộc, và các loại gia vị. Đây là loại rượu thích hợp để thưởng thức trong các dịp đặc biệt.",
       "information": "Rượu nho năm 1987 được sản xuất theo phương pháp truyền thống và được ủ trong thùng gỗ sồi trong nhiều năm trước khi đóng chai. Sau đó, rượu tiếp tục được lưu trữ trong điều kiện lý tưởng để phát triển hương vị.\n\nSản phẩm này có nồng độ cồn cao, vị đậm đà và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai lâu năm hoặc đơn giản là thưởng thức một mình để cảm nhận đầy đủ hương vị.",
       "reviews": [
@@ -297,7 +312,10 @@
       "bestSelling": true,
       "new": true,
       "sale": false,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Rượu vang Italia là loại rượu vang được sản xuất tại Italia - một trong những quốc gia có truyền thống lâu đời về sản xuất rượu vang. Đây là loại rượu có hương vị đặc trưng của vùng đất Italia.\n\nĐặc điểm nổi bật của rượu vang Italia là hương thơm của các loại trái cây như cherry, mận, và các loại gia vị. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn Italia truyền thống.",
       "information": "Rượu vang Italia được sản xuất từ các giống nho đặc trưng của Italia như Sangiovese, Nebbiolo, và Barbera. Quá trình sản xuất tuân theo các quy định nghiêm ngặt của Italia về rượu vang.\n\nSản phẩm này có nồng độ cồn trung bình, vị cân bằng giữa chua và chát, với hậu vị kéo dài. Phù hợp để thưởng thức cùng các món pasta, pizza, hoặc các món thịt đỏ.",
       "reviews": [
@@ -323,7 +341,9 @@
       "bestSelling": true,
       "new": false,
       "sale": false,
-      "tags": ["alcohol"],
+      "tags": [
+        "alcohol"
+      ],
       "features": "Rượu vang Lạt là loại rượu vang được sản xuất tại Đà Lạt, Việt Nam - một vùng đất có khí hậu ôn đới thích hợp cho việc trồng nho. Đây là loại rượu có hương vị đặc trưng của vùng đất Đà Lạt.\n\nĐặc điểm nổi bật của rượu vang Lạt là hương thơm của các loại trái cây như dâu tây, việt quất, và các loại hoa. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn Việt Nam.",
       "information": "Rượu vang Lạt được sản xuất từ các giống nho được trồng tại Đà Lạt, Việt Nam. Quá trình sản xuất kết hợp giữa kỹ thuật truyền thống và công nghệ hiện đại.\n\nSản phẩm này có nồng độ cồn thấp đến trung bình, vị ngọt nhẹ và hậu vị tươi mát. Phù hợp để thưởng thức cùng các món ăn Việt Nam hoặc các món ăn có vị chua ngọt.",
       "reviews": [
@@ -355,7 +375,9 @@
       "bestSelling": true,
       "new": false,
       "sale": false,
-      "tags": ["alcohol"],
+      "tags": [
+        "alcohol"
+      ],
       "features": "Rượu vang Rau là một loại rượu vang đặc biệt được làm từ nho và một số loại rau thơm. Đây là loại rượu có hương vị độc đáo và khác biệt so với các loại rượu vang thông thường.\n\nĐặc điểm nổi bật của rượu vang Rau là hương thơm của các loại rau thơm như húng quế, rosemary, và thyme. Đây là loại rượu thích hợp để thưởng thức cùng các món ăn có nhiều rau và gia vị.",
       "information": "Rượu vang Rau được sản xuất bằng cách ngâm các loại rau thơm trong rượu vang trong một thời gian nhất định. Quá trình này giúp rượu vang hấp thụ hương vị và dưỡng chất từ các loại rau.\n\nSản phẩm này có nồng độ cồn trung bình, vị đậm đà với notes của rau thơm và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món salad, các món ăn có nhiều rau hoặc các món ăn có vị chua.",
       "reviews": [
@@ -381,7 +403,10 @@
       "bestSelling": false,
       "new": true,
       "sale": false,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Rượu vang Trắng Xanh là một loại rượu vang trắng đặc biệt với màu sắc hơi xanh lục nhẹ. Đây là loại rượu được sản xuất từ nho trắng với kỹ thuật đặc biệt giúp giữ lại một phần màu sắc tự nhiên từ vỏ nho.\n\nĐặc điểm nổi bật của rượu vang Trắng Xanh là hương thơm của táo xanh, chanh và các loại trái cây nhiệt đới. Đây là loại rượu lý tưởng để thưởng thức trong những ngày hè nóng bức.",
       "information": "Rượu vang Trắng Xanh được sản xuất chủ yếu ở các vùng ôn đới với khí hậu mát mẻ. Quy trình sản xuất đặc biệt giúp giữ lại hương vị tươi mát và màu sắc đặc trưng.\n\nSản phẩm này có nồng độ cồn trung bình, vị chua nhẹ và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món hải sản, salad hoặc các món ăn nhẹ.",
       "reviews": [
@@ -413,7 +438,10 @@
       "bestSelling": false,
       "new": true,
       "sale": true,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Champagne Classic là một loại rượu vang sủi bọt cao cấp được sản xuất tại vùng Champagne, Pháp. Đây là loại rượu có hương vị tinh tế và bọt ga mịn màng.\n\nĐặc điểm nổi bật của Champagne Classic là hương thơm của táo, lê, và bánh mì nướng. Đây là loại rượu lý tưởng cho các dịp lễ kỷ niệm và tiệc tùng sang trọng.",
       "information": "Champagne Classic được sản xuất theo phương pháp truyền thống của vùng Champagne, Pháp. Quá trình sản xuất bao gồm việc lên men lần thứ hai trong chai để tạo ra bọt ga tự nhiên.\n\nSản phẩm này có nồng độ cồn trung bình, vị cân bằng giữa chua và ngọt, với bọt ga mịn màng và hậu vị kéo dài. Phù hợp để thưởng thức như một loại aperitif hoặc cùng với các món tráng miệng.",
       "reviews": [
@@ -438,7 +466,10 @@
       "bestSelling": false,
       "new": false,
       "sale": true,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Champagne Premium là một loại rượu vang sủi bọt cao cấp được sản xuất tại vùng Champagne, Pháp. Đây là loại rượu có hương vị phong phú và bọt ga mịn màng.\n\nĐặc điểm nổi bật của Champagne Premium là hương thơm của hoa quả chín, bánh mì nướng, và hạt dẻ. Đây là loại rượu lý tưởng cho các dịp đặc biệt và tiệc tùng sang trọng.",
       "information": "Champagne Premium được sản xuất theo phương pháp truyền thống của vùng Champagne, Pháp, với sự lựa chọn kỹ lưỡng về nho và thời gian ủ lâu hơn. Quá trình sản xuất bao gồm việc lên men lần thứ hai trong chai để tạo ra bọt ga tự nhiên.\n\nSản phẩm này có nồng độ cồn trung bình đến cao, vị cân bằng giữa chua và ngọt, với bọt ga mịn màng và hậu vị kéo dài. Phù hợp để thưởng thức như một loại aperitif hoặc cùng với các món hải sản và phô mai.",
       "reviews": [
@@ -471,7 +502,10 @@
       "bestSelling": false,
       "new": true,
       "sale": false,
-      "tags": ["alcohol", "premium"],
+      "tags": [
+        "alcohol",
+        "premium"
+      ],
       "features": "Rượu vang đỏ Pháp là loại rượu vang được sản xuất tại Pháp - một quốc gia có truyền thống lâu đời về sản xuất rượu vang. Đây là loại rượu có hương vị phức tạp và đậm đà.\n\nĐặc điểm nổi bật của rượu vang đỏ Pháp là hương thơm của quả mọng đỏ, vani, và chút hương gỗ sồi. Đây là loại rượu lý tưởng để kết hợp với các món thịt đỏ.",
       "information": "Rượu vang đỏ Pháp được sản xuất từ các giống nho đặc trưng của Pháp như Cabernet Sauvignon, Merlot, và Pinot Noir. Quá trình sản xuất tuân theo các quy định nghiêm ngặt của Pháp về rượu vang.\n\nSản phẩm này có nồng độ cồn cao, vị đậm đà với tannin mạnh và hậu vị kéo dài. Phù hợp để thưởng thức cùng các món thịt đỏ, phô mai lâu năm hoặc các món ăn có nước sốt đậm đà.",
       "reviews": [
@@ -800,6 +834,15 @@
       "password": "khanhdang123",
       "createdAt": "2025-05-19T05:13:40.056Z",
       "updatedAt": "2025-05-19T05:13:40.056Z"
+    },
+    {
+      "id": "540a",
+      "firstName": "Đặng",
+      "lastName": "Khanh",
+      "email": "khanhdang3152@gmail.com",
+      "password": "khanhdang123",
+      "createdAt": "2025-05-26T06:35:04.887Z",
+      "updatedAt": "2025-05-26T06:35:04.887Z"
     }
   ],
   "cart": [
@@ -834,20 +877,7 @@
     {
       "id": "3",
       "userId": "06f2",
-      "items": [
-        {
-          "productId": "7",
-          "quantity": 1
-        },
-        {
-          "productId": "12",
-          "quantity": 2
-        },
-        {
-          "productId": "9",
-          "quantity": 1
-        }
-      ]
+      "items": []
     },
     {
       "id": "4",
@@ -867,113 +897,203 @@
   "orders": [
     {
       "id": "1",
-      "userId": "06f2",
-      "orderNumber": "KHANHDANG456",
+      "userId": "1",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 2,
+          "price": 57000
+        },
+        {
+          "productId": "3",
+          "quantity": 1,
+          "price": 109000
+        },
+        {
+          "productId": "5",
+          "quantity": 1,
+          "price": 147000
+        }
+      ]
     },
     {
       "id": "2",
-      "userId": "06f2",
-      "orderNumber": "KHANHDANG456",
+      "userId": "1",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 3,
+          "price": 30000
+        },
+        {
+          "productId": "4",
+          "quantity": 1,
+          "price": 19000
+        }
+      ]
     },
     {
       "id": "3",
-      "userId": "06f2",
-      "orderNumber": "KHANHDANG456",
+      "userId": "1",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "6",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "4",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "7",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "5",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "8",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "6",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "17/06/2015",
       "createdDate": "14/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 7,
       "totalAmount": 350000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "9",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "7",
-      "userId": "06f2",
-      "orderNumber": "KHANHDANG456",
+      "userId": "1",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "15/06/2015",
       "createdDate": "12/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 3,
       "totalAmount": 250000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "10",
+          "quantity": 1,
+          "price": 450000
+        }
+      ]
     },
     {
       "id": "8",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "14/06/2015",
       "createdDate": "11/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 2,
       "totalAmount": 150000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "11",
+          "quantity": 1,
+          "price": 520000
+        }
+      ]
     },
     {
       "id": "9",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "13/06/2015",
       "createdDate": "10/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 1,
       "totalAmount": 680000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "12",
+          "quantity": 1,
+          "price": 680000
+        }
+      ]
     },
     {
       "id": "10",
       "userId": "1",
-      "orderNumber": "KHANHDANG456",
+      "orderNumber": "LEANHGIANG89",
       "orderDate": "12/06/2015",
       "createdDate": "09/03/2015",
       "warehouse": "HÀ ĐÔNG",
       "totalItems": 4,
       "totalAmount": 200000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 57000
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "price": 30000
+        }
+      ]
     },
     {
       "id": "11",
@@ -984,7 +1104,19 @@
       "warehouse": "HÀ NỘI",
       "totalItems": 2,
       "totalAmount": 166000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 57000
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "price": 30000
+        }
+      ]
     },
     {
       "id": "12",
@@ -995,7 +1127,19 @@
       "warehouse": "HÀ NỘI",
       "totalItems": 3,
       "totalAmount": 429000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "3",
+          "quantity": 1,
+          "price": 109000
+        },
+        {
+          "productId": "5",
+          "quantity": 1,
+          "price": 147000
+        }
+      ]
     },
     {
       "id": "13",
@@ -1006,7 +1150,14 @@
       "warehouse": "HÀ NỘI",
       "totalItems": 5,
       "totalAmount": 640000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "6",
+          "quantity": 2,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "14",
@@ -1017,7 +1168,14 @@
       "warehouse": "HÀ NỘI",
       "totalItems": 3,
       "totalAmount": 320000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "7",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "15",
@@ -1028,7 +1186,14 @@
       "warehouse": "HỒ CHÍ MINH",
       "totalItems": 2,
       "totalAmount": 320000,
-      "status": "completed"
+      "status": "completed",
+      "items": [
+        {
+          "productId": "8",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
     },
     {
       "id": "16",
@@ -1039,7 +1204,121 @@
       "warehouse": "HỒ CHÍ MINH",
       "totalItems": 1,
       "totalAmount": 320000,
-      "status": "canceled"
+      "status": "canceled",
+      "items": [
+        {
+          "productId": "9",
+          "quantity": 1,
+          "price": 320000
+        }
+      ]
+    }
+  ],
+  "addresses": [
+    {
+      "id": "1",
+      "userId": "1",
+      "firstName": "Giang",
+      "lastName": "Lê Anh",
+      "company": "Cổ phần công nghệ DKT",
+      "address": "Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội",
+      "city": "Hà Nội",
+      "country": "Việt Nam",
+      "postalCode": "2300089",
+      "phone": "0974554928",
+      "isDefault": true,
+      "createdAt": "2023-01-01T00:00:00.000Z",
+      "updatedAt": "2023-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "firstName": "Giang",
+      "lastName": "Lê Anh",
+      "company": "Cổ phần công nghệ DKT",
+      "address": "Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội",
+      "city": "Hà Nội",
+      "country": "Việt Nam",
+      "postalCode": "2300089",
+      "phone": "0974554928",
+      "isDefault": false,
+      "createdAt": "2023-01-02T00:00:00.000Z",
+      "updatedAt": "2023-01-02T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "userId": "2",
+      "firstName": "Test",
+      "lastName": "User",
+      "company": "Test Company",
+      "address": "123 Test Street, Test District, Test City",
+      "city": "Hồ Chí Minh",
+      "country": "Việt Nam",
+      "postalCode": "7000000",
+      "phone": "0987654321",
+      "isDefault": true,
+      "createdAt": "2023-01-03T00:00:00.000Z",
+      "updatedAt": "2023-01-03T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "userId": "06f2",
+      "firstName": "Khanh",
+      "lastName": "Đặng",
+      "company": "Tech Company",
+      "address": "456 Tech Street, Tech District",
+      "city": "Hà Nội",
+      "country": "Việt Nam",
+      "postalCode": "1000000",
+      "phone": "0912345678",
+      "isDefault": false,
+      "createdAt": "2023-01-04T00:00:00.000Z",
+      "updatedAt": "2025-05-26T06:33:14.665Z"
+    },
+    {
+      "id": "ccd9",
+      "firstName": "Khanh",
+      "lastName": "Khanh",
+      "company": "test",
+      "address": "test city",
+      "city": "Đà Nẵng",
+      "country": "Việt Nam",
+      "postalCode": "5000",
+      "phone": "",
+      "isDefault": true,
+      "userId": "5517",
+      "createdAt": "2025-05-26T01:32:41.725Z",
+      "updatedAt": "2025-05-26T01:32:41.725Z"
+    },
+    {
+      "id": "54ae",
+      "firstName": "Đặng",
+      "lastName": "Xuân Khanh",
+      "company": "Khanh Tech ",
+      "address": "Hải Châu",
+      "city": "Đà Nẵng",
+      "country": "Việt Nam",
+      "postalCode": "500012",
+      "phone": "0987425309",
+      "isDefault": false,
+      "userId": "06f2",
+      "createdAt": "2025-05-26T03:49:24.789Z",
+      "updatedAt": "2025-05-26T06:33:40.689Z"
+    },
+    {
+      "id": "8a6a",
+      "firstName": "test",
+      "lastName": "test",
+      "company": "test",
+      "address": "test",
+      "city": "Hà Nội",
+      "country": "Việt Nam",
+      "postalCode": "tests",
+      "phone": "tests",
+      "isDefault": false,
+      "userId": "06f2",
+      "createdAt": "2025-05-26T04:37:27.361Z",
+      "updatedAt": "2025-05-26T05:29:51.123Z"
     }
   ]
 }
