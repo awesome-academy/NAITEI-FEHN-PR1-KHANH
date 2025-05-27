@@ -1,6 +1,8 @@
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaTwitter, FaGooglePlusG, FaLinkedinIn, FaRss } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
+import Authentic from '../../assets/authentic.png'
+import Retrobrand from '../../assets/retrobrand.png'
+import Bearbrand from '../../assets/bearbrand.png'
 const Footer = () => {
   const infoLinks = ['VỀ CHÚNG TÔI', 'GIAO HÀNG', 'CAM NGHĨ', 'LƯU TRỮ', 'CHÍNH SÁCH RIÊNG TƯ']
 
@@ -46,7 +48,18 @@ const Footer = () => {
 
   return (
     <footer className='bg-white pt-10 pb-4'>
-      <div className='container mx-auto px-4'>
+      <div className='container max-w-[1200px] border-b border-gray-200 mx-auto px-4 flex flex-col md:flex-row gap-0 items-center justify-between'>
+        <div className='flex-1 flex justify-center items-center h-48 w-full md:border-r md:border-gray-200'>
+          <img src={Authentic} alt='brand' width={200} height={48} className='object-contain' />
+        </div>
+        <div className='flex-1 flex justify-center items-center h-48 w-full md:border-r md:border-gray-200'>
+          <img src={Retrobrand} alt='brand' width={200} height={48} className='object-contain' />
+        </div>
+        <div className='flex-1 flex justify-center items-center h-48 w-full'>
+          <img src={Bearbrand} alt='brand' width={200} height={48} className='object-contain' />
+        </div>
+      </div>
+      <div className='container mx-auto px-4 mt-10'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
           <div>
             <h3 className='text-gray-700 font-medium text-lg mb-4'>THÔNG TIN</h3>

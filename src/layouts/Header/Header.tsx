@@ -178,7 +178,7 @@ const Header = () => {
         <div className='container mx-auto px-4 flex items-center justify-between'>
           <div className='py-3 text-yellow-400 font-semibold'>
             <Link to='/' className='block'>
-              <span className='text-lg'>Wine House</span>
+              <span className='text-lg'>Wine hourse</span>
               <span className='text-xs block'>Since 1980</span>
             </Link>
           </div>

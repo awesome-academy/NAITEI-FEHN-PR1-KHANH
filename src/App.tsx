@@ -16,6 +16,8 @@ import BlogPage from './pages/BlogPage'
 import BlogDetailPage from './pages/BlogDetailPage'
 import OrderHistoryPage from './pages/OrderHistoryPage'
 import AddressPage from './pages/AddressPage'
+import AboutPage from './pages/AboutPage'
+import NotFoundPage from './pages/NotFoundPage'
 import { AuthProvider } from './contexts/AuthContext'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -52,10 +54,13 @@ function App() {
               <Route path='/blog/:blogId' element={<BlogDetailPage />} />
               <Route path='/orders' element={<OrderHistoryPage />} />
               <Route path='/addresses' element={<AddressPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/info' element={<AboutPage />} />
+              <Route path='*' element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
-          <ToastContainer position='top-right' autoClose={2000} hideProgressBar={false} closeOnClick pauseOnHover />
+          <ToastContainer position='top-right' autoClose={3000} hideProgressBar={false} closeOnClick pauseOnHover />
         </div>
       </Router>
     </AuthProvider>
