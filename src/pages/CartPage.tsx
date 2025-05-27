@@ -38,12 +38,8 @@ const CartPage = () => {
   const handleRemoveItem = async (productId: string) => {
     if (!currentUser?.id) return
     try {
-      const success = await cartService.removeCartItem(String(currentUser.id), productId)
-      if (success) {
-        setCartItems((prevItems) => prevItems.filter((item) => item.product.id !== Number(productId)))
-      } else {
-        toast.error('Không thể xóa sản phẩm. Vui lòng thử lại sau.')
-      }
+      await cartService.removeCartItem(String(currentUser.id), productId)
+      setCartItems((prevItems) => prevItems.filter((item) => Number(item.product.id) !== Number(productId)))
     } catch (error) {
       toast.error('Không thể xóa sản phẩm. Vui lòng thử lại sau.')
     }
@@ -54,13 +50,9 @@ const CartPage = () => {
     if (!currentUser?.id) return
 
     try {
-      const success = await cartService.clearCart(String(currentUser.id))
-      if (success) {
-        setCartItems([])
-        toast.success('Đã xóa tất cả sản phẩm khỏi giỏ hàng')
-      } else {
-        toast.error('Không thể xóa giỏ hàng. Vui lòng thử lại sau.')
-      }
+      await cartService.clearCart(String(currentUser.id))
+      setCartItems([])
+      toast.success('Đã xóa tất cả sản phẩm khỏi giỏ hàng')
     } catch (error) {
       toast.error('Không thể xóa giỏ hàng. Vui lòng thử lại sau.')
     }

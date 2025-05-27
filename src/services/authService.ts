@@ -1,7 +1,6 @@
 import type { User, LoginCredentials, AuthResponse } from '../interfaces/User'
 import axios from 'axios'
-
-const API_URL = 'http://localhost:3001'
+import { API_URL } from './api'
 
 const generateToken = (user: User): string => {
   return `mock-jwt-token-${user.id}-${Date.now()}`
