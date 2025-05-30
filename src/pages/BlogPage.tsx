@@ -12,7 +12,7 @@ const BlogPage = () => {
         const data = await api.getBlogPosts()
         setPosts(data)
       } catch (error) {
-        toast.error('Failed to fetch blog posts')
+        toast.error('Xảy ra lỗi khi tải bài viết blog. Vui lòng thử lại sau.')
       }
     }
 

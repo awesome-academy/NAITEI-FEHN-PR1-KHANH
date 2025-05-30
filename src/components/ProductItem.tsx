@@ -34,7 +34,7 @@ const ProductItem = ({ product }: { product: Product }) => {
           const category = await api.getCategoryById(product.categoryId)
           setCategory(category)
         } catch (error) {
-          toast.error('Failed to fetch category names')
+          toast.error('Xảy ra lỗi khi tải danh mục sản phẩm. Vui lòng thử lại sau.')
         }
       }
     }

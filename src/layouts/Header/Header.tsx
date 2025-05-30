@@ -28,7 +28,7 @@ const Header = () => {
         }
         setSubcategories(subCats)
       } catch (error) {
-        toast.error('Failed to load categories')
+        toast.error('Xảy ra lỗi khi tải danh mục sản phẩm. Vui lòng thử lại sau.')
       }
     }
 
